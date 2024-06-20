@@ -5,5 +5,3 @@ const Contact = () => {
   }
   
   export default Contact 
-
-  // stopped at 23:58
