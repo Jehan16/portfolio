@@ -33,5 +33,5 @@ const StairTransition = () => {
 export default StairTransition;
 
 
-// stopped at 38:24
+// stopped at 38:25
 // added a comment
