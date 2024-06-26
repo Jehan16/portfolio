@@ -45,3 +45,6 @@ const MobileNav = () => {
 }
 
 export default MobileNav
+
+
+// stopped at 42:38
