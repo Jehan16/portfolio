@@ -43,3 +43,5 @@ const Home = () => {
 }
 
 export default Home
+
+// stopped at 1:02:08
