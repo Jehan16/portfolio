@@ -13,9 +13,9 @@ const stairAnimation = {
   },
 };
 
-// calculate the reverse index for staggred delay
+// calculate the reverse index for staggered delay
 const reverseIndex = (index) => {
-  const totalSteps = 6; // number of steps
+  const totalSteps = 2; // number of steps
 
   return totalSteps - index - 1;
 };
@@ -23,21 +23,21 @@ const reverseIndex = (index) => {
 const Stairs = () => {
   return (
     <>
-      {[...Array(6)].map((_, index) => {
+      {[...Array(2)].map((_, index) => {
         return (
-            <motion.div
-              key={index}
-              variants={stairAnimation}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{
-                duration: 0.4,
-                ease: "easeInOut",
-                delay: reverseIndex(index) * 0.1,
-              }}
-              className="h-full w-full bg-white relative"
-            />
+          <motion.div
+            key={index}
+            variants={stairAnimation}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{
+              duration: 0.6,
+              ease: "easeInOut",
+              delay: reverseIndex(index) * 0.1,
+            }}
+            className="h-full w-full bg-white/20 relative"
+          />
         );
       })}
     </>

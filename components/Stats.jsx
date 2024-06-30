@@ -5,10 +5,6 @@ import axios from "axios";
 import CountUp from "react-countup";
 
 const stats = [
-  // {
-  //   num: 0,
-  //   text: "Years of experience",
-  // },
   {
     num: 5,
     text: "Projects completed",
@@ -26,6 +22,22 @@ const Stats = () => {
   useEffect(() => {
     const fetchCommitCount = async () => {
       try {
+        // Check if there's a cached value
+        const cachedCommits = localStorage.getItem("cachedCommitCount");
+        const cachedTime = localStorage.getItem("cachedCommitTime");
+
+        if (cachedCommits && cachedTime) {
+          const cacheExpiration = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+          const currentTime = new Date().getTime();
+
+          if (currentTime - parseInt(cachedTime) < cacheExpiration) {
+            // Use cached value if within 24 hours
+            setCommitCount(parseInt(cachedCommits));
+            return;
+          }
+        }
+
+        // Fetch fresh commit count if cache is expired or not available
         const reposResponse = await axios.get(
           "https://api.github.com/users/Jehan16/repos"
         );
@@ -34,22 +46,37 @@ const Stats = () => {
         let totalCommits = 0;
 
         for (const repo of repos) {
-          const commitsResponse = await axios.get(
-            `https://api.github.com/repos/Jehan16/${repo.name}/commits?per_page=1`
-          );
-          const commitCount = commitsResponse.headers["link"]
-            ? parseInt(
-                commitsResponse.headers["link"].match(
-                  /&page=(\d+)>; rel="last"/
-                )[1]
-              )
-            : commitsResponse.data.length;
-          totalCommits += commitCount;
+          try {
+            const commitsResponse = await axios.get(
+              `https://api.github.com/repos/Jehan16/${repo.name}/commits?per_page=1`
+            );
+
+            const commitCount = commitsResponse.headers["link"]
+              ? parseInt(
+                  commitsResponse.headers["link"].match(
+                    /&page=(\d+)>; rel="last"/
+                  )[1]
+                )
+              : commitsResponse.data.length;
+
+            totalCommits += commitCount;
+          } catch (commitError) {
+            console.error(
+              `Error fetching commits for ${repo.name}:`,
+              commitError
+            );
+          }
         }
 
+        // Update state and cache the result
         setCommitCount(totalCommits);
+        localStorage.setItem("cachedCommitCount", totalCommits);
+        localStorage.setItem(
+          "cachedCommitTime",
+          new Date().getTime().toString()
+        );
       } catch (error) {
-        console.error("Error fetching commit count:", error);
+        console.error("Error fetching repos or commits:", error);
       }
     };
 

@@ -9,23 +9,13 @@ import Photo from "@/components/ui/Photo";
 import Stats from "@/components/Stats";
 
 const Home = () => {
-  // download cv function
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "assets/resume/cv.pdf"; // URL of the CV
-    link.download = "Jehan-Silva-CV.pdf"; // desired file name
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer</span>
+            <span className="text-xl">Software Engineering Undergraduate</span>
             <h1 className="h1 mb-6">
               Hello I`m <br /> <span className="text-accent">Jehan Silva</span>
             </h1>
@@ -41,15 +31,16 @@ const Home = () => {
             </p>
             {/* button and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-                onClick={handleDownload}
-              >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <a href="assets/resume/cv.pdf" download="Jehan-Silva-CV.pdf">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2"
+                >
+                  <span>Download CV</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </a>
               <div className="mb-8 xl:mb-0">
                 <Socials
                   containerStyles="flex gap-6"
