@@ -5,18 +5,18 @@ import axios from "axios";
 import CountUp from "react-countup";
 
 const stats = [
-  //   {
-  //     num: 0,
-  //     text: "Years of experience",
-  //   },
-  //   {
-  //     num: 0,
-  //     text: "Projects completed",
-  //   },
-  //   {
-  //     num: 0,
-  //     text: "Technologies mastered",
-  //   },
+  // {
+  //   num: 0,
+  //   text: "Years of experience",
+  // },
+  {
+    num: 5,
+    text: "Projects completed",
+  },
+  {
+    num: 8,
+    text: "Technologies mastered",
+  },
   // Placeholder for GitHub commits
 ];
 
