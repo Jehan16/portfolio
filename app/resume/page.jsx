@@ -16,7 +16,7 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum facilis iste numquam quasi placeat a ducimus",
+    "I am a highly motivated and dedicated software engineering undergraduate student and I possess a strong passion for technology and its potential to make a positive impact on society. With experience in various programming languages,including Java and Python, I have developed the skills necessary to create innovative and efficient software solutions. I am a quick learner and thrive in a team environment, making me a valuable asset to any project. I am constantly seeking opportunities to expand my knowledge and grow as a software engineer, and I am eager to bring my skills and enthusiasm to a dynamic and challenging work environment.",
   info: [
     {
       fieldName: "Name",
@@ -27,24 +27,20 @@ const about = {
       fieldValue: "(+94) 765 722 909",
     },
     {
-      fieldName: "Experience",
-      fieldValue: "12+ Years",
+      fieldName: "Email",
+      fieldValue: "jehanshenil16@gmail.com",
     },
     {
       fieldName: "Nationality",
       fieldValue: "Sri Lankan",
     },
     {
-      fieldName: "Email",
-      fieldValue: "jehanshenil16@gmail.com",
+      fieldName: "Languages",
+      fieldValue: "English, Sinhala",
     },
     {
       fieldName: "Freelance",
       fieldValue: "Available",
-    },
-    {
-      fieldName: "Languages",
-      fieldValue: "English, Sinhala",
     },
   ],
 };
@@ -53,38 +49,22 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.png",
   title: "My Experience",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum facilis iste numquam quasi placeat a ducimus",
+  description: "",
   items: [
     {
-      company: "Tech solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
+      company: "MS Club of SLIIT",
+      position: "Committee Member",
+      duration: "July 2022 - Present",
     },
     {
-      company: "Web Design studios",
-      position: "Front-End Developer Intern",
-      duration: "Summer 2021",
+      company: "STEMUp Educational Foundation",
+      position: "Technical Lead",
+      duration: "Dec. 2022 - Sept. 2023",
     },
     {
-      company: "E-commerce startup",
-      position: "Freelance web developer",
-      duration: "2020-2021",
-    },
-    {
-      company: "Tech academy",
-      position: "Teaching assistance",
-      duration: "2019-2020",
-    },
-    {
-      company: "Digital agency",
-      position: "UI/UX designer",
-      duration: "2019-2020",
-    },
-    {
-      company: "Software development firm",
-      position: "Junior developer",
-      duration: "2019-2020",
+      company: "Fiverr",
+      position: "Freelance programming projects",
+      duration: "Dec. 2020 - April 2021",
     },
   ],
 };
@@ -93,28 +73,22 @@ const experience = {
 const education = {
   icon: "/assets/resume/badge.png",
   title: "My education",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum facilis iste numquam quasi placeat a ducimus",
+  description: "",
   items: [
     {
-      institution: "Online course platform",
-      degree: "fullstack web development Bootcamp",
-      duration: "2022",
+      institution: "SLIIT",
+      degree: "BSc (Hons) in IT Software Engineering",
+      duration: "2021 - Present",
     },
     {
-      institution: "Codecademy",
-      degree: "Front end track",
-      duration: "2022",
+      institution: "Christ King Collage, Ja-Ela",
+      degree: "GCE Advanced Level",
+      duration: "2020",
     },
     {
-      institution: "Online course",
-      degree: "Programming course",
-      duration: "2022",
-    },
-    {
-      institution: "Tech institute",
-      degree: "certified web developer",
-      duration: "2022",
+      institution: "Seventh Day Adventist High School, Kandana",
+      degree: "GCE Ordinary Level",
+      duration: "2017",
     },
   ],
 };
@@ -122,8 +96,7 @@ const education = {
 // skills data
 const skills = {
   title: "My Skills",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum facilis iste numquam quasi placeat a ducimus",
+  description: "",
   skillList: [
     {
       icon: <FaHtml5 />,

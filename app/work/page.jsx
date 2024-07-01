@@ -24,12 +24,11 @@ const projects = [
     num: "01",
     category: "frontend",
     title: "project 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, optio! Odit.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
+    description: "This is a personal portfolio created using next.js",
+    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
+    image: "/assets/work/thumb.png",
     live: "",
-    github: "",
+    github: "https://github.com/Jehan16/portfolio.git",
   },
   {
     num: "02",
@@ -37,8 +36,8 @@ const projects = [
     title: "project 2",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, optio! Odit.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb1.png",
+    stack: [{ name: "stack" }, { name: "stack" }, { name: "stack" }],
+    image: "/assets/work/image.png",
     live: "",
     github: "",
   },
@@ -48,8 +47,8 @@ const projects = [
     title: "project 3",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, optio! Odit.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: "/assets/work/thumb1.png",
+    stack: [{ name: "stack" }, { name: "stack" }],
+    image: "/assets/work/image.png",
     live: "",
     github: "",
   },
