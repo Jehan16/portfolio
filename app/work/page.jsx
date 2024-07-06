@@ -35,11 +35,16 @@ const projects = [
     category: "fullstack",
     title: "project 2",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, optio! Odit.",
-    stack: [{ name: "stack" }, { name: "stack" }, { name: "stack" }],
-    image: "/assets/work/image.png",
-    live: "",
-    github: "",
+      "This is a react application that use nasa api to fetch the nasa Apod image and nasa rover images. In order to access the images you have to sign up as a new user and login to the application.",
+    stack: [
+      { name: "Node.js" },
+      { name: "React" },
+      { name: "MongoDB" },
+      { name: "Bootstrap" },
+    ],
+    image: "/assets/work/thumb2.png",
+    live: "https://jehan-silva-nasa-api.netlify.app/",
+    github: "https://github.com/Jehan16/nasa-api-react-application.git",
   },
   {
     num: "03",
@@ -69,7 +74,8 @@ const Work = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        // transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 1, duration: 0.1, ease: "easeIn" },
       }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
@@ -142,7 +148,7 @@ const Work = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-transparent">
                       {/* overlay */}
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       {/* image */}
@@ -150,7 +156,7 @@ const Work = () => {
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover"
+                          className="object-contain"
                           alt=""
                         />
                       </div>
